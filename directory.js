@@ -3,10 +3,10 @@ angular.module('directoryApp', [])
     var dirList = this;
     dirList.toggle = false;
 
-    dirList.list = [{name: 'Scott', age: 29},
-      {name: 'Leti', age:30},
-      {name: 'Laura', age:13},
-      {name: 'Paco', age:33}];
+    dirList.list = [{name: 'Scott', age: 29, img:'3.jpg'},
+      {name: 'Leti', age:30, img:'1.jpg'},
+      {name: 'Laura', age:13, img:'2.jpg'},
+      {name: 'Paco', age:33, img:'3.jpg'}];
 
       dirList.addPerson = function (){
         dirList.list.push({name: dirList.name, age: dirList.age})

@@ -25,7 +25,7 @@
       <li ng-repeat="item in dirList.list | filter:search"
         ng-class="item.age  > 29 ? 'over-thirty' : 'under-thirty'"
       >
-          {{item.name}} - <em>{{item.age}}</em>
+          <img ng-src="{{item.img}}"/>{{item.name}} - <em>{{item.age}}</em>
       </li>
     </ul>
     <button ng-show="!dirList.toggle" ng-click="dirList.toggle = true"type="button" name="showNames">Show Name</button>
