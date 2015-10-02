@@ -28,7 +28,8 @@
           {{item.name}} - <em>{{item.age}}</em>
       </li>
     </ul>
-    <button ng-click="dirList.toggle = true"type="button" name="showNames">Show Name</button>
+    <button ng-show="!dirList.toggle" ng-click="dirList.toggle = true"type="button" name="showNames">Show Name</button>
+    <button ng-show="dirList.toggle" ng-click="dirList.toggle = false"type="button" name="hideName">Hide Name</button>
     <form ng-submit="dirList.addPerson()">
       <input type="text" placeholder="Name" ng-model="dirList.name">
       <input type="text" placeholder="Age" ng-model="dirList.age">
