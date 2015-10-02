@@ -13,8 +13,8 @@
   <body ng-controller="directoryController as dirList">
 
     <input type="text" ng-model="search">
-    <ul ng-if = "dirList.toggle">
-      <li ng-repeat="item in dirList.list | filter:search"
+    <ul >
+      <li ng-if = "dirList.toggle" ng-repeat="item in dirList.list | filter:search"
         ng-class="item.age  > 29 ? 'over-thirty' : 'under-thirty'"
         ng-include="'person.html'">
 
