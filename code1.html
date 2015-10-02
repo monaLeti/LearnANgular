@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="directoryApp">
   <head>
     <title> Angular </title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-
-    </script>
+      </script>
+    <script src ="directory.js"></script>
   </head>
-  <body ng-init="list = [{name: 'Scott', age: 29},{name: 'Leti', age:30}]">
+  <body ng-controller="directoryController">
+    <input type="text" ng-model="search">
     <ul>
-      <li ng-repeat="item in list">
+      <li ng-repeat="item in list | filter:search">
           {{item.name}} - <em>{{item.age}}</em>
       </li>
     </ul>
